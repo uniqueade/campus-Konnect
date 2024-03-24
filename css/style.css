@@ -9,6 +9,7 @@ body {
   padding: 0;
   font-family: "Poppins", sans-serif;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 h1,
 h2,
@@ -28,11 +29,11 @@ p {
   margin: 0;
   padding: 0;
 }
-a{
+a {
   text-decoration: none;
 }
 .wrapper {
-  display:flex ;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -40,10 +41,9 @@ a{
   background-image: url("../images/bg.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
 }
 .form {
-  width: 600px;
+  width: 500px;
   border: 2px solid #6b2d5c9e;
   padding: 20px;
   background: #fff;
@@ -93,6 +93,7 @@ a{
   border-radius: 15px;
   cursor: pointer;
 }
+
 .form p {
   text-align: center;
 }
@@ -125,7 +126,7 @@ a{
 }
 
 /*dashoard*/
-.container-md {
+.container-sm {
   padding: 15px 0;
   border: 1px solid #ffff;
 }
@@ -137,17 +138,22 @@ a{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border
 }
 .box {
   padding: 20px 30px;
   border-bottom: 2px solid #78757594;
   text-align: center;
 }
-.box a{
+.box a {
   text-decoration: none;
   color: #00000094;
   font-weight: 700;
+}
+.signout {
+  text-decoration: none;
+  width: 20px;
+  padding: 10px auto;
+  border: 1px solid red;
 }
 .box-height {
   padding: 30px 30px;
@@ -164,7 +170,7 @@ a{
   border-radius: 10px;
 }
 .main-content {
-  flex-basis: 85%;
+  flex-basis: 100%;
   font-family: "Poppins", sans-serif;
 }
 .main-content-box {
@@ -174,7 +180,8 @@ a{
   padding-top: 25px;
   padding-left: 20px;
   padding-right: 20px;
-  height: 600px;
+  min-width: 100%;
+  min-height: 100%;
   border: 1px solid #fff;
 }
 .main-content h3 {
@@ -194,7 +201,7 @@ a{
 .btn1 {
   -webkit-border-radius: 60;
   -moz-border-radius: 60;
-  border-radius: 60px;
+  border-radius: 10px;
   font-family: inherit;
   color: #ffffff;
   font-size: 20px;
@@ -251,24 +258,25 @@ a{
 
 /**assignment*/
 
-.call-to-action{
+.call-to-action {
   margin: 30px 0;
 }
-tr{
+tr {
   height: 40px;
-  
 }
-td{
+td {
   vertical-align: middle;
   font-size: 14px;
 }
-td a{
+td a {
   text-decoration: none;
   color: grey;
 }
+thead {
+  font-size: 16px;
+}
 
-
-.icon{
+.icon {
   width: 23px;
   margin-right: 10px;
 }
@@ -278,42 +286,110 @@ td a{
   align-items: center;
   padding: ;
 }*/
-.status{
-  margin:15px 0;
+.status {
+  margin: 15px 0;
   font-size: 14px;
   font-weight: 600;
-
 }
-.container-st{
+.container-st {
   display: flex;
   flex-direction: column;
   font-size: 14px;
 }
-.container-span{
+.container-span {
   margin-right: 10px;
 }
-.calendar{
+.calendar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
- /*resources*/
- .resource{
+/*resources*/
+.resource {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-right: 10px;
- }
- .resource-bank{
-  
-
- }
- .resource-bank{
-  border: 1px solid gree;
-
- }
- .btn a{
+}
+.resource-bank {
+  border: 1px solid green;
+}
+.btn a {
   text-decoration: none;
   color: #000;
- }
+}
+
+/*media query*/
+
+@media only screen and (max-width: 1225px) {
+  .profile-details {
+    flex-direction: column;
+  }
+  .dash-cont {
+    min-width: auto;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  header {
+    visibility: hidden;
+    display: hidden;
+  }
+  .container-sm {
+    margin-top: -80px;
+  }
+  .form {
+    width: 400px;
+  }
+  .dash-control-box {
+    min-height: fit-content;
+  }
+  .dash-img {
+    margin-top: 30px;
+  }
+  .main-content- {
+    border: 1px solid green;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  .box {
+    padding: 10px 20px;
+  }
+
+  .resource {
+    flex-direction: column;
+    align-items: start;
+  }
+  .resource .search {
+    min-width: 50%;
+  }
+  .card {
+    text-align: center;
+  }
+  .d-flex .download {
+    min-width: 50%;
+    margin: 10px auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container-sm {
+    width: 480px;
+  }
+  .form {
+    padding: 10px;
+  }
+  .form p a {
+    display: block;
+  }
+  .support p {
+    margin-top: 20px;
+  }
+  .support a {
+    font-size: 16px;
+  }
+  .dash-cont {
+    background-color: RED;
+  }
+}
